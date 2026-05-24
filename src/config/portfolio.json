@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "siteTitle": "Andrew Loloy — Web Developer & Automation Engineer",
+    "siteDescription": "Andrew Loloy is a Manila-based web developer and automation engineer specializing in API integrations, n8n workflows, and B2B e-commerce platforms.",
+    "siteUrl": "https://www.druloloy.xyz",
+    "siteImage": "/og-image.svg",
+    "twitterHandle": "@druloloy"
+  },
+  "personal": {
+    "name": "Andrew Loloy",
+    "nickname": "Dru",
+    "title": "Web Developer & Automation Engineer",
+    "roles": ["Web Developer", "Automation Engineer", "Team Lead", "Full Stack Builder"],
+    "location": "Taguig, PH",
+    "email": "druloloy@proton.me",
+    "website": "https://www.druloloy.xyz",
+    "tagline": "I build systems that work — and teams that ship.",
+    "bio": "I'm a web developer and automation engineer based in Manila, specializing in API-driven workflows, B2B e-commerce integrations, and building products that scale. Currently leading a dev team at Journey Better, shipping integrations across Zoho, Webflow, FoxyCart, and HubSpot for international clients.",
+    "available": true,
+    "social": {
+      "github": "https://github.com/druloloy",
+      "linkedin": "https://linkedin.com/in/druloloy"
+    }
+  },
+  "experience": [
+    {
+      "id": "journey-better",
+      "role": "Web Developer",
+      "company": "Journey Better Business Group Inc.",
+      "type": "Full Time",
+      "location": "On-Site, Makati, PH",
+      "period": "May 2025 – Present",
+      "current": true,
+      "summary": "Lead developer at a digital marketing agency serving international B2B e-commerce clients.",
+      "highlights": [
+        "Lead and mentor 3 junior developers within a 6-person web development team",
+        "Reduced workflow execution time from ~30 minutes to under 10 minutes",
+        "Diagnosed and resolved webhook-driven server congestion through scheduling optimizations",
+        "Led integrations across Zoho CRM/Inventory, FoxyCart, Webflow, HubSpot, Plytix, and Typeform"
+      ]
+    },
+    {
+      "id": "anyplans",
+      "role": "Full Stack Developer",
+      "company": "Anyplans Pty Ltd.",
+      "type": "Contract",
+      "location": "Remote · Queensland, AU",
+      "period": "Nov 2023 – Mar 2024",
+      "current": false,
+      "summary": "Dating app focused on real-life connections.",
+      "highlights": [
+        "Built a website plugin that expanded the app's reach to 400+ new users across 4 countries within one month",
+        "Maintained the application backend and collaborated with a cross-functional team"
+      ]
+    },
+    {
+      "id": "spiralytics-consultant",
+      "role": "Web Developer Consultant",
+      "company": "Spiralytics, Inc.",
+      "type": "Contract",
+      "location": "Remote · Makati, PH",
+      "period": "Jun 2023 – Oct 2023",
+      "current": false,
+      "summary": "One of the top digital marketing companies in the Philippines.",
+      "highlights": [
+        "Improved website design and UX by redesigning web components, optimizing images, and enhancing page layouts",
+        "Boosted website traffic through SEO implementation and streamlined internal sales tools"
+      ]
+    },
+    {
+      "id": "spiralytics-intern",
+      "role": "Web Developer Intern",
+      "company": "Spiralytics, Inc.",
+      "type": "Internship",
+      "location": "Remote · Makati, PH",
+      "period": "Jan 2023 – Apr 2023",
+      "current": false,
+      "summary": "",
+      "highlights": [
+        "Enhanced clients' web design and UX; increased online visibility through SEO implementation",
+        "Developed Chatty, an AI-powered chatbot for employee knowledge management"
+      ]
+    }
+  ],
+  "skills": {
+    "Automation & Integrations": ["n8n", "Webhooks", "REST APIs", "HubSpot Automation", "Data Sync", "Workflow Optimization"],
+    "Platforms & CMS": ["Webflow", "WordPress", "Tilda", "FoxyCart", "Zoho CRM", "Zoho Inventory", "HubSpot", "Typeform"],
+    "Development": ["JavaScript", "TypeScript", "React", "Next.js", "React Native", "Node.js", "Express", "SQL", "PostgreSQL"],
+    "Analytics & SEO": ["Google Analytics", "Google Lighthouse", "Pagespeed Insights", "Ahrefs", "Technical SEO"],
+    "Leadership & Delivery": ["Team Lead", "QA Review", "Client Communication", "Task Delegation", "Deployment Coordination", "Technical Planning"]
+  },
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "B2B E-Commerce Integration Suite",
+      "description": "End-to-end automation connecting Zoho, FoxyCart, and Webflow for a laboratory equipment supplier.",
+      "tags": ["n8n", "Zoho", "FoxyCart", "Webflow"],
+      "link": null,
+      "repo": null,
+      "featured": true,
+      "placeholder": true
+    },
+    {
+      "id": "project-2",
+      "title": "Anyplans Growth Plugin",
+      "description": "Website plugin that expanded a dating app's reach to 400+ users across 4 countries in one month.",
+      "tags": ["React", "Node.js", "PostgreSQL"],
+      "link": null,
+      "repo": null,
+      "featured": true,
+      "placeholder": true
+    },
+    {
+      "id": "project-3",
+      "title": "Chatty — Internal AI Chatbot",
+      "description": "AI-powered knowledge management chatbot built for a digital marketing agency's internal teams.",
+      "tags": ["AI", "Node.js", "JavaScript"],
+      "link": null,
+      "repo": null,
+      "featured": false,
+      "placeholder": true
+    }
+  ],
+  "awards": [
+    {
+      "title": "Programmer of the Year 2023",
+      "org": "Taguig City University — CICT"
+    },
+    {
+      "title": "Champion — Python Programming 2023",
+      "org": "Taguig City University — CICT"
+    },
+    {
+      "title": "Champion — Web Design 2023",
+      "org": "Taguig City University — CICT"
+    }
+  ],
+  "education": [
+    {
+      "degree": "BS in Computer Science",
+      "school": "Taguig City University",
+      "year": "2023"
+    }
+  ]
+}
