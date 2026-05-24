@@ -40,7 +40,7 @@ export default function App() {
       <Nav email={personal.email} />
 
       <main>
-        <Hero tagline={personal.tagline} cvPath="/cv-druloloy-052426.pdf" />
+        <Hero tagline={personal.tagline} cvPath="/cv-druloloy-052426.pdf" illustration="/druloloy-hero.png" />
         <About personal={personal} />
         <Skills skills={skills} />
         <Experience experience={experience} />

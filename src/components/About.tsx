@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useRef, useState, useEffect } from 'react';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { Personal } from '../types/portfolio';
 import { useScrollReveal, revealVariants, staggerContainer } from '../hooks/useScrollReveal';
 import styles from './About.module.css';
@@ -7,8 +8,41 @@ interface AboutProps {
   personal: Pick<Personal, 'bio' | 'location' | 'available'>;
 }
 
+function useCountUp(target: number, isInView: boolean, duration = 2000) {
+  const [count, setCount] = useState(0);
+  const prefersReduced = useReducedMotion();
+
+  useEffect(() => {
+    if (!isInView) return;
+    if (prefersReduced) { setCount(target); return; }
+
+    const start = performance.now();
+    let raf: number;
+
+    const tick = (now: number) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        setCount(target);
+      }
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [isInView, target, duration, prefersReduced]);
+
+  return count;
+}
+
 export function About({ personal }: AboutProps) {
   const { ref, animate, initial } = useScrollReveal();
+  const counterRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(counterRef, { once: true, amount: 0.4 });
+  const count = useCountUp(3700, isInView);
 
   return (
     <section className={styles.about} id="about" aria-label="About">
@@ -20,8 +54,16 @@ export function About({ personal }: AboutProps) {
           initial={initial}
           animate={animate}
         >
-          <motion.div className={styles.letterWrap} variants={revealVariants} aria-hidden="true">
-            <span className={styles.letter}>D</span>
+          <motion.div
+            className={styles.counterWrap}
+            variants={revealVariants}
+            ref={counterRef}
+            aria-label="3,700 plus hours worked"
+          >
+            <p className={styles.counterValue} aria-hidden="true">
+              {count.toLocaleString()}<span className={styles.counterPlus}>+</span>
+            </p>
+            <p className={styles.counterLabel}>hrs worked</p>
           </motion.div>
 
           <motion.div className={styles.content} variants={revealVariants}>

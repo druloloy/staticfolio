@@ -6,12 +6,13 @@ import styles from './Hero.module.css';
 interface HeroProps {
   tagline: Personal['tagline'];
   cvPath: string;
+  illustration: string;
 }
 
 const CYCLING_WORDS = ['scale.', 'ship.', 'connect.', 'work.'];
 const INTERVAL_MS = 2500;
 
-export function Hero({ tagline, cvPath }: HeroProps) {
+export function Hero({ tagline, cvPath, illustration }: HeroProps) {
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
@@ -76,6 +77,20 @@ export function Hero({ tagline, cvPath }: HeroProps) {
             </a>
           </motion.div>
         </div>
+
+        <motion.div
+          className={styles.imageCol}
+          initial={{ opacity: 0, x: 32 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: 'easeOut', delay: 0.55 }}
+        >
+          <img
+            src={illustration}
+            alt="Illustrated portrait of Dru Loloy"
+            className={styles.illustration}
+            loading="eager"
+          />
+        </motion.div>
       </div>
     </section>
   );

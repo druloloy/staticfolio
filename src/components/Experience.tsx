@@ -25,11 +25,9 @@ function ExperienceCard({ job }: { job: ExperienceType }) {
         <div className={styles.header}>
           <div>
             <h3 className={styles.role}>{job.role}</h3>
+            <p className={styles.company}>{job.company}</p>
             <p className={styles.meta}>
-              <span className={styles.company}>{job.company}</span>
-              <span className={styles.separator} aria-hidden="true">·</span>
               <span className={styles.type}>{job.type}</span>
-              <span className={styles.separator} aria-hidden="true">·</span>
               <span className={styles.location}>{job.location}</span>
             </p>
             <p className={styles.period}>{job.period}</p>

@@ -28,11 +28,41 @@
   position: relative;
   z-index: 1;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
 }
 
 .content {
   padding: 120px 0 80px;
-  max-width: 800px;
+  flex: 1;
+  min-width: 0;
+}
+
+.imageCol {
+  display: none;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 768px) {
+  .imageCol {
+    display: block;
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .imageCol {
+    width: 400px;
+  }
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .headline {

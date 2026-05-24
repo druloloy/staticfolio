@@ -81,8 +81,16 @@
   margin-bottom: 6px;
 }
 
-.meta {
+.company {
   font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 3px;
+}
+
+.meta {
+  font-size: 12px;
+  font-family: var(--font-mono);
   color: var(--color-muted);
   display: flex;
   flex-wrap: wrap;
@@ -91,19 +99,10 @@
   margin-bottom: 4px;
 }
 
-.company {
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-.separator {
+.location::before {
+  content: '·';
   color: var(--color-border);
-}
-
-.type,
-.location {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  margin-right: 6px;
 }
 
 .period {

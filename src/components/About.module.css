@@ -11,33 +11,53 @@
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 240px 1fr;
     gap: 80px;
   }
 }
 
-.letterWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.letter {
-  font-size: clamp(160px, 22vw, 280px);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.06em;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--color-border);
-  user-select: none;
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .letter {
-    font-size: 280px;
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: 300px 1fr;
   }
 }
+
+/* Counter graphic */
+
+.counterWrap {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.counterValue {
+  font-size: clamp(72px, 8vw, 100px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.counterPlus {
+  font-size: 0.42em;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0;
+  vertical-align: super;
+  margin-left: 3px;
+}
+
+.counterLabel {
+  margin-top: 16px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Content column */
 
 .content {
   display: flex;
