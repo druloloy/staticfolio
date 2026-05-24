@@ -1,0 +1,107 @@
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mesh {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 25%, rgba(0, 102, 204, 0.10) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 70% at 85% 75%, rgba(0, 102, 204, 0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 45% at 65% 15%, rgba(120, 190, 255, 0.07) 0%, transparent 65%);
+  animation: meshDrift 22s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes meshDrift {
+  0%   { transform: scale(1)    translate(0px, 0px);    }
+  33%  { transform: scale(1.04) translate(-12px, 18px); }
+  66%  { transform: scale(0.97) translate(16px, -12px); }
+  100% { transform: scale(1.02) translate(-6px, 10px);  }
+}
+
+.contentWrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.content {
+  padding: 120px 0 80px;
+  max-width: 800px;
+}
+
+.headline {
+  font-size: clamp(38px, 7.5vw, 72px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--color-text);
+  margin-bottom: 28px;
+}
+
+.wordWrap {
+  display: inline-block;
+  color: var(--color-accent);
+  min-width: 4ch;
+}
+
+.word {
+  display: inline-block;
+}
+
+.tagline {
+  font-size: clamp(18px, 2.2vw, 22px);
+  color: var(--color-muted);
+  max-width: 520px;
+  margin-bottom: 44px;
+  line-height: 1.65;
+}
+
+.ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-display);
+}
+
+.ctaPrimary:hover {
+  background-color: var(--color-accent);
+  transform: scale(1.03);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.ctaSecondary:hover {
+  border-color: var(--color-text);
+  transform: scale(1.03);
+}

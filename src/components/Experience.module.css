@@ -1,0 +1,166 @@
+.experience {
+  padding: var(--section-gap) 0;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--color-accent), var(--color-border));
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 9px;
+  }
+}
+
+.card {
+  display: flex;
+  gap: 28px;
+  padding-bottom: 52px;
+  position: relative;
+}
+
+.card:last-child {
+  padding-bottom: 0;
+}
+
+.dotWrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  border: 2px solid var(--color-bg);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.dotActive {
+  background-color: var(--color-green);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.cardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.role {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.meta {
+  font-size: 14px;
+  color: var(--color-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.company {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.separator {
+  color: var(--color-border);
+}
+
+.type,
+.location {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.currentBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background-color: rgba(0, 102, 204, 0.1);
+  border: 1px solid rgba(0, 102, 204, 0.25);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.highlight {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.highlight::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.toggle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--font-mono);
+  transition: opacity 0.2s ease;
+}
+
+.toggle:hover {
+  opacity: 0.7;
+}
